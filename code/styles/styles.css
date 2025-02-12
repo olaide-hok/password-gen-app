@@ -1,19 +1,206 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(../assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
 /* General body styling */
 body {
   position: relative; /* Ensures the body is positioned relative to its normal flow */
   display: flex; /* Enables flexbox layout */
   justify-content: center; /* Centers content horizontally */
   min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
-  font-family: "Space Mono";
+  font-family: "JetBrains Mono";
   font-style: normal;
   line-height: normal;
-  background: #c5e4e7;
+  background: #08070b;
+  font-feature-settings: "liga" off, "clig" off;
 }
 
 /* Media query for screens with a width of up to 375px */
 @media screen and (max-width: 375px) {
   body {
     min-height: 100%; /* Ensures the body takes up at least the full height of its parent container */
+  }
+}
+.body-bold {
+  font-size: 18px;
+}
+
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  height: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -12px; /* Centers thumb on the track */
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e6e5ea;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-runnable-track {
+  background-color: #a4ffaf;
+  height: 0.5rem;
+}
+
+.slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e6e5ea;
+  cursor: pointer;
+}
+
+.slider::-moz-range-track {
+  background-color: #18171f;
+  height: 0.5rem;
+}
+
+.slider::-moz-range-progress {
+  background-color: #a4ffaf;
+  height: 0.5rem;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #e6e5ea;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.button {
+  background: #a4ffaf;
+  padding: 1.25rem;
+  font-weight: 700;
+  width: 100%;
+  border-style: none;
+  text-transform: uppercase;
+}
+
+.rect {
+  border: 2px solid #e6e5ea;
+  width: 10px;
+  height: 28px;
+}
+
+.too_weak-strength {
+  background-color: #f64a4a;
+}
+
+.weak-strength {
+  background-color: #fb7c58;
+}
+
+.medium-strength {
+  background-color: #f8cd65;
+}
+
+.strong-strength {
+  background-color: #a4ffaf;
+}
+
+.container {
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 100%;
+}
+.container .header {
+  color: #817d92;
+  font-size: 16px;
+  font-weight: 700;
+}
+.container .generated_pwd {
+  display: flex;
+  justify-content: space-between;
+  background-color: #24232c;
+  padding: 1rem;
+  align-items: center;
+}
+.container .generated_pwd .pwd {
+  color: #e6e5ea;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.container .pwd_details {
+  background-color: #24232c;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: 1rem;
+}
+.container .pwd_details .length .wrapper {
+  color: #e6e5ea;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.8125rem;
+}
+.container .pwd_details .length .wrapper span {
+  float: right;
+  color: #a4ffaf;
+}
+.container .pwd_details .details {
+  color: #e6e5ea;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.container .pwd_details .details div {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.container .pwd_details .strength-button {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.container .pwd_details .strength-button .indicators {
+  background: #18171f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 0.875rem 0.875rem 1rem;
+}
+.container .pwd_details .strength-button .indicators span {
+  color: #817d92;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.container .pwd_details .strength-button .indicators div {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+.container .pwd_details .strength-button .indicators div .strength {
+  text-transform: uppercase;
+  color: #e6e5ea;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+.container .pwd_details .strength-button .indicators div .icons {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+@media screen and (width: 768px) {
+  .heading-m-bold {
+    font-size: 24px;
+  }
+}
+@media screen and (width: 1440px) {
+  .heading-l-bold {
+    font-size: 32px;
   }
 }
 

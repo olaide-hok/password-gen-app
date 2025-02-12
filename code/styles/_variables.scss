@@ -1,4 +1,19 @@
 @use "functions" as *;
 
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(../assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+
 // colors
+$dark-grey: #24232c;
+$grey: #817d92;
+$almost-white: #e6e5ea;
+$very-dark-grey: #18171f;
+$neon-green: #a4ffaf;
+$red-one: #f64a4a;
+$orange-two: #fb7c58;
+$yellow-three: #f8cd65;
+
 // Typography
+$font-family: "JetBrains Mono";

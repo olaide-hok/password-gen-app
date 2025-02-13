@@ -22,8 +22,15 @@
       <header class="header heading-l-bold">Password Generator</header>
 
       <div class="generated_pwd">
-        <p class="pwd">P4$5W0rD!</p>
+        <input
+          class="pwd"
+          type="text"
+          id="passwordField"
+          placeholder="P4$5W0rD!"
+          readonly
+        >
         <svg
+          id="clipboardIcon"
           xmlns="http://www.w3.org/2000/svg"
           width="18"
           height="20"
@@ -42,35 +49,93 @@
       <div class="pwd_details">
         <div class="length">
           <div class="wrapper">
-            <label for="char_length">Character Length</label>
-            <span>10</span>
+            <label for="charLengthSlider">Character Length</label>
+            <output name="charLength_value" id="charLength_value">0</output>
           </div>
           <input
             type="range"
-            name="length"
-            id="char_length"
+            name="charLengthSlider"
+            id="charLengthSlider"
             class="slider"
+            min="0"
+            max="20"
             step="1"
+            value="0"
           >
         </div>
 
         <div class="details">
-          <div>
-            <input type="checkbox" name="uppercase" id="uppercase">
-            <label for="uppercase">Include Uppercase Letters</label>
-          </div>
-          <div>
+          <label class="label">
+            <input type="checkbox" id="uppercase">
+            <svg
+              class="checkmark"
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="12"
+            >
+              <path
+                stroke="#18171F"
+                stroke-width="3"
+                fill="none"
+                d="M1 5.607 4.393 9l8-8"
+              />
+            </svg>
+            Include Uppercase Letters
+          </label>
+
+          <label class="label" for="lowercase">
             <input type="checkbox" name="lowercase" id="lowercase">
-            <label for="lowercase">Include Lowercase Letters</label>
-          </div>
-          <div>
+            <svg
+              class="checkmark"
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="12"
+            >
+              <path
+                stroke="#18171F"
+                stroke-width="3"
+                fill="none"
+                d="M1 5.607 4.393 9l8-8"
+              />
+            </svg>
+            Include Lowercase Letters
+          </label>
+
+          <label class="label" for="numbers">
             <input type="checkbox" name="numbers" id="numbers">
-            <label for="numbers">Include Numbers</label>
-          </div>
-          <div>
+            <svg
+              class="checkmark"
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="12"
+            >
+              <path
+                stroke="#18171F"
+                stroke-width="3"
+                fill="none"
+                d="M1 5.607 4.393 9l8-8"
+              />
+            </svg>
+            Include Numbers
+          </label>
+
+          <label class="label" for="symbols">
             <input type="checkbox" name="symbols" id="symbols">
-            <label for="symbols"> Symbols</label>
-          </div>
+            <svg
+              class="checkmark"
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="12"
+            >
+              <path
+                stroke="#18171F"
+                stroke-width="3"
+                fill="none"
+                d="M1 5.607 4.393 9l8-8"
+              />
+            </svg>
+            Symbols
+          </label>
         </div>
 
         <div class="strength-button">
@@ -79,7 +144,7 @@
             <div>
               <span
                 id="strength"
-                class="strength heading-l-bold heading-m-bold body-bold"
+                class="strength heading-l-bold heading-m-bold body-bold d-none"
                 >MEDIUM</span
               >
               <div class="icons">
@@ -91,7 +156,7 @@
             </div>
           </div>
 
-          <button type="button" class="button">
+          <button id="pwdGenBtn" type="button" class="button">
             Generate
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -30,15 +30,22 @@ body {
   font-size: 18px;
 }
 
+.d-none {
+  display: none;
+}
+
 // interactive components classes
 
 .slider {
   -webkit-appearance: none; /* Override default CSS styles */
   appearance: none;
-  // background: $red-one;
   height: rem(8px);
   width: 100%;
   cursor: pointer;
+}
+
+.slider:focus {
+  outline: none; /* Removes the blue border. */
 }
 
 .slider::-webkit-slider-thumb {
@@ -50,6 +57,11 @@ body {
   border-radius: 50%;
   background: $almost-white;
   cursor: pointer;
+
+  &:hover {
+    background-color: $very-dark-grey;
+    border: 2px solid $neon-green;
+  }
 }
 
 .slider::-webkit-slider-runnable-track {
@@ -78,9 +90,22 @@ body {
 input[type="checkbox"] {
   -webkit-appearance: none;
   appearance: none;
-  border: 2px solid $almost-white;
   width: rem(20px);
   height: rem(20px);
+}
+
+input[type="checkbox"]:not(:checked) {
+  border: 2px solid $almost-white;
+}
+
+input[type="checkbox"]:hover {
+  border: 2px solid $neon-green;
+  cursor: pointer;
+}
+
+/* When the checkbox is checked, add a blue background */
+input[type="checkbox"]:checked {
+  background-color: $neon-green;
 }
 
 .button {
@@ -90,6 +115,19 @@ input[type="checkbox"] {
   width: 100%;
   border-style: none;
   text-transform: uppercase;
+
+  &:hover {
+    background: $dark-grey;
+    border: 2px solid $neon-green;
+    cursor: pointer;
+    color: $neon-green;
+
+    svg {
+      path {
+        fill: $neon-green;
+      }
+    }
+  }
 }
 
 .rect {
@@ -139,6 +177,20 @@ input[type="checkbox"] {
       color: $almost-white;
       font-size: rem(24px);
       font-weight: 700;
+      border-style: none;
+      opacity: 0.25; /* Initial opacity for placeholder */
+      background-color: transparent;
+      width: 75%;
+
+      &::placeholder {
+        color: $almost-white; /* Placeholder text color */
+      }
+    }
+    svg:hover {
+      cursor: pointer;
+      path {
+        fill: $almost-white;
+      }
     }
   }
 
@@ -156,7 +208,7 @@ input[type="checkbox"] {
         font-weight: 700;
         margin-bottom: rem(13px);
 
-        span {
+        output {
           float: right;
           color: $neon-green;
         }
@@ -171,10 +223,23 @@ input[type="checkbox"] {
       flex-direction: column;
       row-gap: 1rem;
 
-      div {
+      .label {
         display: flex;
         align-items: center;
+        position: relative;
         column-gap: 1rem;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        .checkmark {
+          position: absolute;
+          top: 50%;
+          left: 3.3%;
+          transform: translate(-50%, -50%);
+        }
       }
     }
 
@@ -221,6 +286,20 @@ input[type="checkbox"] {
 @media screen and (width: 768px) {
   .heading-m-bold {
     font-size: 24px;
+  }
+
+  .container {
+    .pwd_details {
+      .details {
+        .label {
+          .checkmark {
+            top: 50%;
+            left: 5%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
   }
 }
 

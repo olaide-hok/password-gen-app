@@ -219,6 +219,7 @@ input[type="checkbox"]:checked {
         output {
           float: right;
           color: $neon-green;
+          font-size: rem(24px);
         }
       }
     }
@@ -319,6 +320,12 @@ input[type="checkbox"]:checked {
       .details {
         font-size: rem(18px);
         margin-bottom: rem(25px);
+      }
+
+      .length .wrapper {
+        output {
+          font-size: rem(32px);
+        }
       }
 
       .details {

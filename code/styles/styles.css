@@ -200,6 +200,7 @@ input[type=checkbox]:checked {
 .container .pwd_details .length .wrapper output {
   float: right;
   color: #a4ffaf;
+  font-size: 1.5rem;
 }
 .container .pwd_details .details {
   color: #e6e5ea;
@@ -284,6 +285,9 @@ input[type=checkbox]:checked {
   .container .pwd_details .details {
     font-size: 1.125rem;
     margin-bottom: 1.5625rem;
+  }
+  .container .pwd_details .length .wrapper output {
+    font-size: 2rem;
   }
   .container .pwd_details .details {
     row-gap: 1.1875rem;

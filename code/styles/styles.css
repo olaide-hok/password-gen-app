@@ -283,6 +283,7 @@ input[type=checkbox]:checked {
   .container .pwd_details .length .wrapper,
   .container .pwd_details .details {
     font-size: 1.125rem;
+    margin-bottom: 1.5625rem;
   }
   .container .pwd_details .details {
     row-gap: 1.1875rem;

@@ -27,12 +27,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./password-gen-app.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Link](https://olaide-hok.github.io/password-gen-app/)
 
 ## My process
 
@@ -43,14 +42,13 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- JavaScript
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [The Output element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output) - This helped me understand the `<output>` HTML element which is a container element into which a site or app can inject the results of a calculation or the outcome of a user action.
+- [input type="range"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range) - This is an amazing article which helped me understand the `<input>` elements of type range let the user specify a numeric value which must be no less than a given value, and no more than another given value.
+- [How TO - Copy Text to Clipboard](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp) - This is an amazing article which helped me understand how to copy text to the clipboard with JavaScript. I'd recommend it to anyone still learning this concept.
 
 ## Author
 

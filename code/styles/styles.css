@@ -61,7 +61,6 @@ body {
 }
 
 .slider::-webkit-slider-runnable-track {
-  background-color: #a4ffaf;
   height: 0.5rem;
 }
 

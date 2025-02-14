@@ -22,7 +22,11 @@ body {
   }
 }
 .body-bold {
-  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.body-regular {
+  font-size: 1rem;
 }
 
 .d-none {
@@ -152,7 +156,6 @@ input[type=checkbox]:checked {
 }
 .container .header {
   color: #817d92;
-  font-size: 16px;
   font-weight: 700;
   text-align: center;
 }
@@ -258,11 +261,40 @@ input[type=checkbox]:checked {
 
 @media screen and (min-width: 768px) {
   .heading-m-bold {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .container {
     padding: 8.3125rem 0 0 0;
     width: 33.75rem;
+    row-gap: 1.5rem;
+  }
+  .container .header {
+    margin-bottom: 0.4375rem;
+  }
+  .container .pwd_details {
+    padding: 1.5rem 2rem 2rem;
+  }
+  .container .pwd_details .length .wrapper,
+  .container .pwd_details .details {
+    font-size: 1.125rem;
+  }
+  .container .pwd_details .details {
+    row-gap: 1.1875rem;
+  }
+  .container .pwd_details .strength-button {
+    row-gap: 2rem;
+  }
+  .container .pwd_details .strength-button .indicators {
+    padding: 1.4375rem 1.3125rem 1.96875rem 2rem;
+  }
+  .container .pwd_details .strength-button .indicators span {
+    font-size: 1.125rem;
+  }
+  .container .pwd_details .strength-button .indicators div span {
+    font-size: 1.5rem;
+  }
+  .container .pwd_details .strength-button .button {
+    font-size: 1.125rem;
   }
 }
 @media screen and (min-width: 1440px) {

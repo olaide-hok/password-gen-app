@@ -27,7 +27,11 @@ body {
 // Utilities
 
 .body-bold {
-  font-size: 18px;
+  font-size: rem(18px);
+}
+
+.body-regular {
+  font-size: 1rem;
 }
 
 .d-none {
@@ -166,7 +170,6 @@ input[type="checkbox"]:checked {
 
   .header {
     color: #817d92;
-    font-size: 16px;
     font-weight: 700;
     text-align: center;
   }
@@ -290,12 +293,49 @@ input[type="checkbox"]:checked {
 
 @media screen and (min-width: 768px) {
   .heading-m-bold {
-    font-size: 24px;
+    font-size: rem(24px);
   }
 
   .container {
     padding: rem(133px) 0 0 0;
     width: rem(540px);
+    row-gap: rem(24px);
+
+    .header {
+      margin-bottom: rem(7px);
+    }
+
+    .pwd_details {
+      padding: rem(24px) 2rem 2rem;
+      .length .wrapper,
+      .details {
+        font-size: rem(18px);
+      }
+
+      .details {
+        row-gap: rem(19px);
+      }
+
+      .strength-button {
+        row-gap: rem(32px);
+        .indicators {
+          padding: rem(23px) rem(21px) rem(31.5px) rem(32px);
+          span {
+            font-size: rem(18px);
+          }
+
+          div {
+            span {
+              font-size: rem(24px);
+            }
+          }
+        }
+
+        .button {
+          font-size: rem(18px);
+        }
+      }
+    }
   }
 }
 

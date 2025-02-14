@@ -305,6 +305,10 @@ input[type="checkbox"]:checked {
       margin-bottom: rem(7px);
     }
 
+    .generated_pwd {
+      padding: rem(19px) rem(28px) rem(19px) 2rem;
+    }
+
     .pwd_details {
       padding: rem(24px) 2rem 2rem;
       .length .wrapper,

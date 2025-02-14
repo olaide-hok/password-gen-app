@@ -68,6 +68,10 @@ body {
   background: #e6e5ea;
   cursor: pointer;
 }
+.slider::-moz-range-thumb:hover {
+  background-color: #18171f;
+  border: 2px solid #a4ffaf;
+}
 
 .slider::-moz-range-track {
   background-color: #18171f;

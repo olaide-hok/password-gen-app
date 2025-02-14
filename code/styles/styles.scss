@@ -75,6 +75,11 @@ body {
   border-radius: 50%;
   background: $almost-white;
   cursor: pointer;
+
+  &:hover {
+    background-color: $very-dark-grey;
+    border: 2px solid $neon-green;
+  }
 }
 
 .slider::-moz-range-track {

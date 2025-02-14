@@ -296,7 +296,7 @@ input[type=checkbox]:checked {
     row-gap: 2rem;
   }
   .container .pwd_details .strength-button .indicators {
-    padding: 1.4375rem 1.3125rem 1.96875rem 2rem;
+    padding: 1.4375rem 1.3125rem 1.4375rem 2rem;
   }
   .container .pwd_details .strength-button .indicators span {
     font-size: 1.125rem;

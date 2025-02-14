@@ -307,6 +307,10 @@ input[type="checkbox"]:checked {
 
     .generated_pwd {
       padding: rem(19px) rem(28px) rem(19px) 2rem;
+
+      .pwd {
+        font-size: 2rem;
+      }
     }
 
     .pwd_details {

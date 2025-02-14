@@ -96,9 +96,13 @@ const generateRandomString = (length) => {
   return result;
 };
 
+const neonGreen = "#a4ffaf";
+const veryDarkGrey = "#18171F";
 // Display the range input value
-charLengthSlider.addEventListener("input", (event) => {
+charLengthSlider.addEventListener("input", function (event) {
   charLengthValue.textContent = event.target.value;
+  const ratio = ((this.value - this.min) / (this.max - this.min)) * 100;
+  this.style.background = `linear-gradient(90deg, ${neonGreen} ${ratio}%, ${veryDarkGrey} ${ratio}%)`;
 });
 
 pwdGenBtn.addEventListener("click", function () {

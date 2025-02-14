@@ -261,6 +261,7 @@ input[type=checkbox]:checked {
     font-size: 24px;
   }
   .container {
+    padding: 8.3125rem 0 0 0;
     width: 33.75rem;
   }
 }
